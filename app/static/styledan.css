@@ -1,0 +1,23 @@
+/* Пустой фон (по умолчанию белый) */
+body {
+    background-color: #ffffff; /* Белый фон */
+    margin: 0;
+    padding: 0;
+}
+
+/* Дополнительные стили для шапки */
+header {
+    background-color: #007bff; /* Синий цвет фона */
+    color: white; /* Белый текст */
+    padding: 60px 0; /* Отступы сверху и снизу */
+}
+
+/* Стили для основного контента */
+main {
+    padding: 20px;
+}
+
+.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
