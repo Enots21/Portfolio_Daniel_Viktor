@@ -21,3 +21,14 @@ main {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
 }
+
+.header-container img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для фото */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Элементы располагаются вертикально */
+        text-align: center; /* Текст по центру */
+    }
+}
