@@ -26,12 +26,12 @@ async def read_Daniel(request: Request):
 
 
 @app.get("/viktor", response_class=HTMLResponse)
-async def read_Viktor(request: Request):
+async def read_viktor(request: Request):
     image_url = "/static/file/img/Viktor.jpg"  # Указываем путь к изображению
     return templates.TemplateResponse("Viktor.html", {"request": request, "image_url": image_url})
 
 
 @app.get("/viktor/1", response_class=HTMLResponse)
-async def read_Viktor_1(request: Request):
+async def read_viktor_1(request: Request):
     image_url = "/static/file/img/Viktor.jpg"
     return templates.TemplateResponse("Viktor_1.html", {"request": request, "image_url": image_url})
