@@ -35,3 +35,15 @@ async def read_viktor(request: Request):
 async def read_viktor_1(request: Request):
     image_url = "/static/file/img/Viktor.jpg"
     return templates.TemplateResponse("Viktor_1.html", {"request": request, "image_url": image_url})
+
+
+@app.get("/viktor/2", response_class=HTMLResponse)
+async def read_viktor_1(request: Request):
+    image_url = "/static/file/img/Viktor.jpg"
+    return templates.TemplateResponse("Viktor_2.html", {"request": request, "image_url": image_url})
+
+
+@app.get("/viktor/3", response_class=HTMLResponse)
+async def read_viktor_1(request: Request):
+    image_url = "/static/file/img/Viktor.jpg"
+    return templates.TemplateResponse("Viktor_3.html", {"request": request, "image_url": image_url})
