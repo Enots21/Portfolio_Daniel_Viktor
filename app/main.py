@@ -21,8 +21,11 @@ async def read_root(request: Request):
 
 
 @app.get("/daniel", response_class=HTMLResponse)  # Портфолио Даниила
-async def read_Daniel(request: Request):
-    return templates.TemplateResponse("Daniel.html", {"request": request})
+async def read_daniel(request: Request):
+    photo_img = 'static/file/img/Daniel.png'
+    fon_video = "/static/file/fons.mp4"  # Указываем путь к видеофайлу
+    return templates.TemplateResponse("Daniel.html", {"request": request, "fon_video": fon_video,
+                                                        "photo_img": photo_img})
 
 
 @app.get("/viktor", response_class=HTMLResponse)

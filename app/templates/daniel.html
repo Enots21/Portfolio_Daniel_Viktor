@@ -1,29 +1,214 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/stylesdan.css">
-  </head>
-  <body>
-  <!-- Шапка -->
-  <header class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h1 class="display-4">Моя большая шапка</h1>
-      <p class="lead">Это пример шапки с использованием Bootstrap</p>
-    </div>
-  </header>
-  <!-- Основное содержимое -->
-  <main class="container my-5">
-    <h2>Основной контент</h2>
-    <p>Этот раздел может содержать ваш основной контент.</p>
-  </main>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт с видео-фоном и прозрачной шапкой</title>
+  <!-- Подключение Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/styledan.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Видео-фон -->
+<video autoplay muted loop id="video-background">
+  <source src="static/file/fons.mp4" type="video/mp4">
+  Ваш браузер не поддерживает видео.
+</video>
 
-  <!-- Подключаем Bootstrap JS (необязательно, если не используете JS-компоненты) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+<!-- Шапка с использованием Bootstrap -->
+<header class="header fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <!-- Логотип или название сайта -->
+    <a class="navbar-brand logofront" href="#">Alexandrov Daniil</a>
+
+    <!-- Кнопка для мобильных устройств -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Ссылки -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Скилы</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Проекты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Обо Мне</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- Основной контент -->
+<main class="content">
+  <div class="container text-center">
+    <div class="profile-image">
+      <img src="static/file/img/Daniel.png" alt="Фотография Alexandrov Daniil">
+    </div>
+    <h1 class="name">Alexandrov Daniil</h1>
+    <p class="description">Python Back-End Developer</p>
+  </div>
+</main>
+
+<section id="skills" class="py-1">
+  <div class="container">
+    <h2>Скилы</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">  <!-- Bootstrap grid -->
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Разработка Telegram-бота для уведомлений или автоматизации задач.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Создание веб-приложения для управления задачами (To-Do List).</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Парсинг и анализ данных с веб-сайтов.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Решение задач на платформах LeetCode, Codewars</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Проводил анализ данных продажи и статистика пользователей и создал визуализацию данных виде графика.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Разработал REST API для управления базой данных телеграмм магазина</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Создал игру с графическим интерфейсом Крестики - Нолики</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Добавление новой функциональности и улучшение существующей.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Написание документации</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Разрабатывал сложные SQL запросы</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">NoSQL</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">PostgreSQL</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">Matplotlib</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <h5 class="card-title">REST API</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="py-1">
+  <div class="container">
+    <h2>Проекты</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">  <!-- Bootstrap grid -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">AutoTravelSheet</h5>
+            <p class="card-text">Упростите учет поездок с помощью нашего Telegram-бота! Автоматически генерируйте путевые листы – быстро, удобно и без ошибок. Больше времени на дорогу, меньше на бумажную работу!</p>
+            <a href="https://github.com/Enots21/AutoTravelSheet" class="btn btn-primary">Подробнее</a> <!-- Замените # ссылкой на проект -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">AdminPhotoBot</h5>
+            <p class="card-text">Этот бот позволяет пользователям отправлять фотографии администратору. Фотографии автоматически пересылаются администратору для дальнейшего рассмотрения.</p>
+            <a href="https://github.com/Enots21/-AdminPhotoBot" class="btn btn-primary">Подробнее</a> <!-- Замените # ссылкой на проект -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Graduate-work</h5>
+              <p class="card-text">Анализ и сравнение написания web-приложений с использованием разных фреймворков.</p>
+              <a href="https://github.com/Enots21/Graduate-work" class="btn btn-primary">Подробнее</a> <!-- Замените # ссылкой на проект -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Добавьте больше блоков .col для каждого проекта -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Подключение Bootstrap JS (необходим для работы навигации на мобильных устройствах) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0p9UCZuZOjzfsG0+gRLqzjyIxXNxyAAJmwZDg+pHyIEh0LkmjVYs2PiQkGS9egvY" crossorigin="anonymous"></script>
+</body>
 </html>

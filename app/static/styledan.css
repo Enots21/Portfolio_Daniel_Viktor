@@ -1,23 +1,173 @@
-/* Пустой фон (по умолчанию белый) */
-body {
-    background-color: #ffffff; /* Белый фон */
+/* Общие стили */
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-/* Дополнительные стили для шапки */
-header {
-    background-color: #007bff; /* Синий цвет фона */
-    color: white; /* Белый текст */
-    padding: 60px 0; /* Отступы сверху и снизу */
+/* Видео-фон */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
-/* Стили для основного контента */
-main {
+/* Отступ сверху для основного контента, чтобы не перекрывался navbar */
+.content {
+    padding-top:300px;
+}
+.name {
+    font-family: "Alumni Sans Pinstripe", serif;
+    font-size: 50px;
+}
+
+.description {
+    font-family: "Alumni Sans Pinstripe", serif;
+    font-size: 20px;
+}
+
+.logofront {
+    font-family: "Alumni Sans Pinstripe";
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.alumni-sans-pinstripe-regular {
+    font-family: "Alumni Sans Pinstripe", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.profile-image {
+    width: 170px; /* Ширина изображения */
+    height: 170px; /* Высота изображения */
+    margin: 0 auto 20px; /* Центрируем изображение по горизонтали и добавляем отступ снизу */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабируем изображение, чтобы оно заполняло контейнер */
+    border-radius: 50%; /* Делаем изображение круглым */
+}
+
+/* Стили для секций */
+section {
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Цвет при наведении */
+}
+
+
+/* Стили для полоски */
+#skills {
+    padding: 20px;
+    margin-top: 300px;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center; /* Центрирование элементов по горизонтали */
+}
+
+.skill {
+    background-color: #f0f0f04d;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/*  Общие стили для секции проектов  */
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+/*  Сетка проектов  */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
+    gap: 30px;
+    width: 80%;              /* Ограничиваем ширину контейнера */
+    margin: 0 auto;            /* Центрируем контейнер */
+}
+
+/*  Карточка проекта  */
+.project {
+    background-color: #f0f0f04d;
+    border-radius: 8px;
+    overflow: hidden;          /* Обрезаем содержимое, выходящее за границы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Поднимаем карточку при наведении */
+}
+
+/*  Изображение проекта  */
+.project-image {
+    width: 100%;
+    height: 200px;           /* Фиксированная высота для изображений */
+    object-fit: cover;       /* Масштабируем изображение с обрезкой */
+    display: block;           /* Убираем лишний отступ снизу (если есть) */
+}
+
+/*  Информация о проекте  */
+.project-info {
     padding: 20px;
 }
 
-.py-5 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #333;
 }
+
+.project-info p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/*  Ссылка "Подробнее"  */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Зеленый цвет кнопки */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Анимация цвета при наведении */
+}
+
+.project-link:hover {
+    background-color: #367c39; /* Более темный зеленый цвет при наведении */
+}
+
+
+
+
+
+
